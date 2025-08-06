@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->renameColumn('name', 'category_name');
             $table->string('slug');
             $table->string('description')->nullable();
             $table->timestamps();
@@ -26,10 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->renameColumn('category_name', 'name');
-        });
-
         Schema::dropIfExists('categories');
     }
 };

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        $catefories = [
+        $categories = [
             'Technology',
             'Health',
             'Lifestyle',
@@ -32,12 +32,12 @@ class DatabaseSeeder extends Seeder
             'Finance',
             'Entertainment'
         ];
-        
-        foreach ($catefories as $cate) {
+
+        foreach ($categories as $category) {
             Category::factory()->create([
-                'name' => $cate,
-                'slug' => \Illuminate\Support\Str::slug($cate),
-                'description' => "This is the description for $cate category."
+                'name' => $category,
+                'slug' => \Illuminate\Support\Str::slug($category),
+                'description' => "This is the description for $category category."
             ]);
         }
 
