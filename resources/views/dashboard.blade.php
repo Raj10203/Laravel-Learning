@@ -8,13 +8,13 @@
                         <ul class="flex flex-wrap -mb-px justify-center">
                             <li class="me-2">
                                 <a href="#"
-                                    class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-900 dark:hover:text-gray-300">
+                                    class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-900 dark:hover:text-gray-300 dark:hover:border-gray-300">
                                     All</a>
                             </li>
                             @foreach ($categories as $category)
                             <li class="me-2">
                                 <a href="#"
-                                    class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-900 dark:hover:text-gray-300">{{ $category->name }}</a>
+                                    class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-900 dark:hover:text-gray-300 dark:hover:border-gray-300">{{ $category->name }}</a>
                             </li>
                             @endforeach
                         </ul>
@@ -47,7 +47,7 @@
                             </x-primary-button>
                         </div>
                         <a href="#" class="flex-shrink-0 w-48 ">
-                            <img class="rounded-r-lg object-cover h-full w-full" src="https://flowbite.com/docs/images/blog/image-4.jpg" alt="" />
+                            <img class="rounded-r-lg object-cover h-full w-full" src="{{ Storage::url($post->image) }}" alt="" />
                         </a>
                     </div>
 
